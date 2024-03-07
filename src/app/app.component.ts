@@ -1,13 +1,23 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+
+import { HeaderComponent } from './components/header/header.component';
+import { FirstContentComponent } from './components/first-content/first-content.component';
+import { SecondContentComponent } from './components/second-content/second-content.component';
+import { ThirdContentComponent } from './components/third-content/third-content.component';
+import { FourthContentComponent } from './components/fourth-content/fourth-content.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [
+    HeaderComponent,
+    FirstContentComponent,
+    SecondContentComponent,
+    ThirdContentComponent,
+    FourthContentComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'actus';
