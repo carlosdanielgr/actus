@@ -1,0 +1,29 @@
+@use "../../../styles/mixins" as *;
+
+.header {
+  &__logo {
+    max-width: 195px;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__menu {
+    padding: 0;
+    width: 33px;
+    border-style: none;
+
+    @include screen(small) {
+      display: none;
+    }
+
+    > img {
+      width: 100%;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}

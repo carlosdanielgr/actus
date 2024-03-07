@@ -1,0 +1,10 @@
+.fourth-content {
+  &__image {
+    max-width: 40rem;
+    margin: 0 auto;
+
+    > img {
+      width: 100%;
+    }
+  }
+}

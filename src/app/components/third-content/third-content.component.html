@@ -1,0 +1,35 @@
+<article class="third-content">
+  <ngb-carousel
+    class="third-content__carousel"
+    [pauseOnHover]="true"
+    [showNavigationIndicators]="false"
+  >
+    @for(card of cards; track $index){
+    <ng-template ngbSlide>
+      <ng-content
+        *ngTemplateOutlet="cardsContent; context: { data: card }"
+      ></ng-content>
+    </ng-template>
+    }
+  </ngb-carousel>
+  <div class="third-content__cards-web">
+    @for(card of cards; track $index){
+    <ng-content
+      *ngTemplateOutlet="cardsContent; context: { data: card }"
+    ></ng-content>
+    }
+  </div>
+</article>
+<ng-template #cardsContent let-data="data">
+  <div class="card">
+    <figure class="card__icon">
+      <img [src]="data.icon" [alt]="data.title" />
+    </figure>
+    <span class="card__title">{{ data.title }}</span>
+    <hr />
+    <p class="card__text">
+      {{ data.text }}
+    </p>
+    <a [href]="data.url" class="card__link btn btn-primary"> CONOCE MÁS </a>
+  </div>
+</ng-template>
