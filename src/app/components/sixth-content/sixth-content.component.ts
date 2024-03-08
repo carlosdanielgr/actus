@@ -24,7 +24,7 @@ export class SixthContentComponent {
     },
     {
       icon: './assets/images/hotel.webp',
-      title: 'HOTELERÍA',
+      title: 'HOTELERÍA/RESTAURANTE',
     },
   ];
 
