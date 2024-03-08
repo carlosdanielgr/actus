@@ -21,7 +21,6 @@
     </div>
   </div>
   <div class="fifth-content__video">
-    @if(showVideo){
     <iframe
       width="560"
       height="315"
@@ -31,16 +30,6 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen
     ></iframe>
-    }@else{
-    <span class="subtitle">CONOCE NUESTRA PLATAFORMA</span>
-    <p>Explora innovación y eficiencia a tu Alcance</p>
-    <button
-      type="button"
-      class="btn fifth-content__btnvideo"
-      (click)="onClickVideo()"
-    >
-      <img src="./assets/icons/btnvideo.webp" alt="Video" />
-    </button>
-    }
   </div>
+  <div id="features"></div>
 </article>
