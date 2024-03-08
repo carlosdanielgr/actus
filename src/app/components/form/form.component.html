@@ -1,0 +1,90 @@
+<article class="card form">
+  <div class="text-center">
+    <h3 class="subtitle">¡Gracias por tu interés en Actus ELENA!</h3>
+    <div class="col-5 m-auto">
+      <hr class="hr-primary" />
+    </div>
+    <p>
+      Completa el formulario para recibir asesoría personalizada y transformar
+      tu empresa.
+    </p>
+  </div>
+  <form class="row">
+    <div class="col-md-6">
+      <input
+        type="text"
+        class="form-control mb-3"
+        placeholder="Nombre completo"
+        aria-describedby="name"
+      />
+    </div>
+    <div class="col-md-6">
+      <input
+        type="text"
+        class="form-control mb-3"
+        placeholder="Número de Teléfono"
+        aria-describedby="phone"
+      />
+    </div>
+    <div class="col-md-6">
+      <input
+        type="email"
+        class="form-control mb-3"
+        placeholder="Correo Electrónico"
+        aria-describedby="email"
+      />
+    </div>
+    <div class="col-md-6">
+      <div ngbDropdown container="body">
+        <button
+          type="button"
+          class="form-select header__menu btn"
+          ngbDropdownToggle
+        >
+          Prefiero ser contactado por
+        </button>
+        <div ngbDropdownMenu aria-labelledby="Menu">
+          <button ngbDropdownItem>Correo Electrónico</button>
+          <button ngbDropdownItem>Beneficios</button>
+          <button ngbDropdownItem>Llamada Telefónica</button>
+          <button ngbDropdownItem>Mensaje de WhatsApp</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div ngbDropdown container="body">
+        <button
+          type="button"
+          class="form-select header__menu btn"
+          ngbDropdownToggle
+        >
+          Sector de la Empresa
+        </button>
+        <div ngbDropdownMenu aria-labelledby="Menu">
+          <button ngbDropdownItem>Alimentos</button>
+          <button ngbDropdownItem>Hotelería</button>
+          <button ngbDropdownItem>Agrícolas</button>
+          <button ngbDropdownItem>Ganaderas</button>
+          <button ngbDropdownItem>Maquinaria</button>
+          <button ngbDropdownItem>Manufactura</button>
+          <input
+            type="text"
+            placeholder="Otro"
+            aria-describedby="sector company"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <input
+        type="text"
+        class="form-control mb-3"
+        placeholder="Nombre de la Empresa"
+        aria-describedby="name company"
+      />
+    </div>
+    <div class="text-center">
+      <button type="button" class="btn btn-primary">ENVIAR FORMULARIO</button>
+    </div>
+  </form>
+</article>

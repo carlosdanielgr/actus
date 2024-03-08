@@ -9,5 +9,10 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './second-content.component.scss',
 })
 export class SecondContentComponent {
-  images: string[] = [];
+  images: string[] = [
+    './assets/icons/Logo_Caffenio.svg',
+    './assets/icons/Logo_Optimum.svg',
+    './assets/icons/Logo_Parque la ruina.svg',
+    './assets/icons/Logo_SWEM.svg',
+  ];
 }

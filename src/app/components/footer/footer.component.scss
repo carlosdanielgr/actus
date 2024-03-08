@@ -1,0 +1,52 @@
+@use "../../../styles/mixins" as *;
+
+.footer {
+  &__content {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include screen(custom, max, 768) {
+      text-align: center;
+      grid-template-columns: none;
+
+      > span {
+        grid-row: 3/4;
+      }
+    }
+
+    > span {
+      color: #ffffff4d;
+    }
+
+    .navbar-nav {
+      gap: 1rem;
+
+      @include screen(med-small) {
+        flex-direction: row;
+        gap: 2rem;
+      }
+    }
+  }
+
+  &__social-net {
+    @include screen(small) {
+      place-self: end;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #b01e68;
+    color: #000;
+
+    > i {
+      font-size: 1.3rem;
+    }
+  }
+}

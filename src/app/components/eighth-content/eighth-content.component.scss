@@ -1,0 +1,58 @@
+@use "../../../styles/mixins" as *;
+
+.eighth-content {
+  &__banner {
+    position: relative;
+    background: linear-gradient(
+      0deg,
+      rgba(21, 18, 36, 1) 0%,
+      rgba(21, 18, 36, 0) 100%
+    );
+
+    > img {
+      position: relative;
+      z-index: -1;
+    }
+  }
+
+  &__text-banner {
+    position: absolute;
+    left: 2rem;
+    bottom: 1rem;
+
+    > span {
+      color: #f5409c;
+    }
+  }
+
+  &__info-content {
+    display: flex;
+    flex-direction: column;
+
+    @include screen(med-small) {
+      flex-direction: row;
+      gap: 2rem;
+
+      > hr {
+        margin-top: -12px;
+        margin-bottom: -40px;
+        width: 1px;
+        height: 70px;
+        background-image: linear-gradient(
+          to top,
+          #343045,
+          #c0b7e8,
+          #8176af,
+          #343045
+        );
+      }
+    }
+  }
+
+  &__info {
+    > span:nth-child(3) {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  }
+}

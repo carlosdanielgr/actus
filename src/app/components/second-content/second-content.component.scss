@@ -1,0 +1,27 @@
+@use "../../../styles/mixins" as *;
+
+.second-content {
+  &__carousel {
+    @include screen(small) {
+      display: none !important;
+    }
+  }
+
+  &__imgweb {
+    @include screen(custom, max, 768) {
+      display: none;
+    }
+  }
+
+  img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  p {
+    max-width: 70rem;
+    margin: 0 auto;
+    font-size: 1.5rem;
+  }
+}

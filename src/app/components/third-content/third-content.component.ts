@@ -1,23 +1,18 @@
-import { NgTemplateOutlet } from '@angular/common';
 import { Component } from '@angular/core';
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
-
-interface Card {
-  icon: string;
-  title: string;
-  text: string;
-  url: string;
-}
+import {
+  CardCarousel,
+  CardCarouselComponent,
+} from '../card-carousel/card-carousel.component';
 
 @Component({
   selector: 'app-third-content',
   standalone: true,
-  imports: [NgTemplateOutlet, NgbCarouselModule],
+  imports: [CardCarouselComponent],
   templateUrl: './third-content.component.html',
   styleUrl: './third-content.component.scss',
 })
 export class ThirdContentComponent {
-  cards: Card[] = [
+  cards: CardCarousel[] = [
     {
       icon: './assets/images/innovative.webp',
       title: 'Eficiencia Innovadora',

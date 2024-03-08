@@ -1,7 +1,23 @@
-<div class="header d-flex align-items-center gap-4 justify-content-between">
+<header class="header d-flex align-items-center gap-4 justify-content-between">
   <figure class="header__logo">
     <img src="./assets/images/logo.webp" alt="Logo" />
   </figure>
+  <nav class="header__navbar navbar gap-4">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a aria-current="page" href="#">ÚNETENOS</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">BENEFICIOS</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">SOBRE NOSOTROS</a>
+      </li>
+    </ul>
+    <button type="button" class="header__btnget btn btn-outline-light">
+      SOLICITA UN DEMO
+    </button>
+  </nav>
   <div ngbDropdown placement="bottom-end" container="body">
     <button type="button" class="header__menu btn" ngbDropdownToggle>
       <img src="./assets/icons/menu.svg" alt="Menu" />
@@ -13,4 +29,4 @@
       <button ngbDropdownItem>Contáctanos</button>
     </div>
   </div>
-</div>
+</header>

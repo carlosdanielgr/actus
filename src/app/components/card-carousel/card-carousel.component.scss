@@ -1,0 +1,68 @@
+@use "../../../styles/mixins" as *;
+
+.card-carousel {
+  margin: 0 auto;
+  max-width: 27rem;
+
+  @include screen(med-small) {
+    display: none !important;
+  }
+
+  &__cards-web {
+    display: none;
+    gap: 2rem;
+
+    @include screen(med-small) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.card {
+  align-items: center;
+  max-width: 27rem;
+  height: 37rem;
+  flex: 1;
+  justify-content: space-evenly;
+  margin: 0 auto;
+
+  &--hover {
+    &:hover {
+      scale: 1.1;
+      transition: all 0.8s;
+    }
+  }
+
+  &--active {
+    scale: 1.1;
+  }
+
+  > hr {
+    width: 80%;
+    border-color: #c0b7e854;
+  }
+
+  &__icon {
+    padding: 3.5rem;
+    width: 220px;
+    height: 220px;
+    background-color: #0e0e0e52;
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__text {
+    font-size: 0.9rem;
+    max-width: 15.5rem;
+  }
+
+  &__link {
+    max-width: 15.5rem;
+    width: 13.4rem;
+  }
+}

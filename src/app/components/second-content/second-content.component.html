@@ -1,18 +1,25 @@
 <article class="second-content">
-  <ngb-carousel [pauseOnHover]="true" [showNavigationIndicators]="false">
+  <ngb-carousel
+    class="second-content__carousel"
+    [pauseOnHover]="true"
+    [showNavigationIndicators]="false"
+  >
     @for(image of images; track $index){
     <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
+      <div class="picsum-img-wrapper text-center">
         <img [src]="image" alt="Image {{ $index }}" />
-      </div>
-      <div class="carousel-caption">
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
       </div>
     </ng-template>
     }
   </ngb-carousel>
-  <p class="mt-5">
+  <div class="second-content__imgweb row">
+    @for(image of images; track $index){
+    <div class="col picsum-img-wrapper">
+      <img [src]="image" alt="Image {{ $index }}" />
+    </div>
+    }
+  </div>
+  <p class="mt-4">
     Empresas de primer nivel de sectores como Alimentos, Hotelería, Agrícolas,
     Ganaderas, Maquinaria y Manufactura confían en nosotros.
   </p>

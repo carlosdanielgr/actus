@@ -1,0 +1,26 @@
+@use "../../../styles/mixins" as *;
+
+.seventh-content {
+  justify-content: center;
+  gap: 1.5rem;
+
+  > div {
+    min-width: 300px;
+
+    @include screen(small) {
+      max-width: 380px;
+      min-width: 380px;
+    }
+  }
+
+  img {
+    width: 41px;
+    height: 41px;
+    margin-bottom: 1rem;
+  }
+}
+
+.txt-sm {
+  font-weight: 700;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,57 @@
+<ngb-carousel
+  class="card-carousel"
+  [pauseOnHover]="true"
+  [showNavigationIndicators]="false"
+>
+  @for(card of cards; track $index){
+  <ng-template ngbSlide>
+    @if(isclickable){
+    <button type="button" class="card card--hover" (click)="onClick(card)">
+      <ng-content
+        *ngTemplateOutlet="cardsContent; context: { data: card }"
+      ></ng-content>
+    </button>
+    }@else{
+    <div class="card">
+      <ng-content
+        *ngTemplateOutlet="cardsContent; context: { data: card }"
+      ></ng-content>
+    </div>
+    }
+  </ng-template>
+  }
+</ngb-carousel>
+<div class="card-carousel__cards-web">
+  @for(card of cards; track $index){ @if(isclickable){
+  <button
+    type="button"
+    class="card card--hover"
+    [class.card--active]="currentCard.title === card.title"
+    (click)="onClick(card)"
+  >
+    <ng-content
+      *ngTemplateOutlet="cardsContent; context: { data: card }"
+    ></ng-content>
+  </button>
+  }@else{
+  <div class="card">
+    <ng-content
+      *ngTemplateOutlet="cardsContent; context: { data: card }"
+    ></ng-content>
+  </div>
+  } }
+</div>
+<ng-template #cardsContent let-data="data">
+  <figure class="card__icon">
+    <img [src]="data.icon" [alt]="data.title" />
+  </figure>
+  <span class="card__title">{{ data.title }}</span>
+  @if(data.text){
+  <hr />
+  <p class="card__text">
+    {{ data.text }}
+  </p>
+  } @if(data.url){
+  <a [href]="data.url" class="card__link btn btn-primary"> CONOCE MÁS </a>
+  }
+</ng-template>
