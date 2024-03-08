@@ -1,9 +1,6 @@
 @use "../../../styles/mixins" as *;
 
 .card-carousel {
-  margin: 0 auto;
-  max-width: 27rem;
-
   @include screen(med-small) {
     display: none !important;
   }
@@ -22,10 +19,11 @@
 .card {
   align-items: center;
   max-width: 27rem;
-  height: 37rem;
+  height: 30rem;
   flex: 1;
   justify-content: space-evenly;
   margin: 0 auto;
+  gap: 1rem;
 
   &--hover {
     &:hover {
@@ -38,8 +36,9 @@
     scale: 1.1;
   }
 
-  > hr {
-    width: 80%;
+  hr {
+    margin: 1rem auto;
+    width: 70%;
     border-color: #c0b7e854;
   }
 

@@ -1,6 +1,26 @@
+@use "../../../styles/mixins" as *;
+
 .fourth-content {
   &__image {
     max-width: 40rem;
     margin: 0 auto;
+  }
+
+  p {
+    max-width: 1200px;
+    margin: 2rem auto;
+
+    > span {
+      color: #f5409c;
+    }
+
+    @include screen(small) {
+      font-size: 1.25rem;
+
+      > span {
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
+    }
   }
 }

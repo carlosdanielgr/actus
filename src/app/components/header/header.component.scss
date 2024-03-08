@@ -35,6 +35,13 @@
     }
   }
 
+  &__dripdown {
+    > a {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  }
+
   &__btnget {
     border-radius: 50px;
     padding: 0.6rem 1rem;

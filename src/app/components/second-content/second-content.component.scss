@@ -1,6 +1,9 @@
 @use "../../../styles/mixins" as *;
 
 .second-content {
+  max-width: 1140px;
+  margin: 0 auto;
+
   &__carousel {
     @include screen(small) {
       display: none !important;
@@ -13,15 +16,23 @@
     }
   }
 
-  img {
-    width: 300px;
-    height: 150px;
-    object-fit: cover;
+  .picsum-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+
+    > img {
+      max-width: 300px;
+    }
   }
 
   p {
-    max-width: 70rem;
-    margin: 0 auto;
-    font-size: 1.5rem;
+    max-width: 860px;
+    margin: 1.5rem auto;
+
+    @include screen(small) {
+      font-size: 1.5rem;
+    }
   }
 }

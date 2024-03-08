@@ -1,11 +1,15 @@
 @use "../../../styles/mixins" as *;
 
 .fifth-content {
+  margin-bottom: 6rem;
+
   &__info-content {
+    margin: 2rem 0 8rem;
     display: flex;
     flex-direction: column;
 
     @include screen(med-small) {
+      gap: 1.5rem;
       flex-direction: row;
 
       > hr {
@@ -27,6 +31,10 @@
     width: 15rem;
     margin: 0 auto;
 
+    @include screen(med-small) {
+      text-align: start;
+    }
+
     > span {
       font-size: 3rem;
       font-weight: 500;
@@ -41,13 +49,18 @@
     align-items: center;
     border-radius: 50px;
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
     height: 34rem;
     background: radial-gradient(
       circle,
       rgba(58, 52, 86, 1) 10%,
       rgba(33, 30, 46, 1) 100%
     );
+
+    > iframe {
+      height: 100%;
+      width: 100%;
+    }
   }
 
   &__btnvideo {

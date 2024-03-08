@@ -5,28 +5,29 @@
   <nav class="header__navbar navbar gap-4">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a aria-current="page" href="#">ÚNETENOS</a>
+        <a href="#form">ÚNETENOS</a>
       </li>
       <li class="nav-item">
-        <a href="#">BENEFICIOS</a>
+        <a href="#features">CARACTERÍSTICAS</a>
       </li>
       <li class="nav-item">
-        <a href="#">SOBRE NOSOTROS</a>
+        <a href="https://elena.actus.io/" target="_blank">SOBRE NOSOTROS</a>
       </li>
     </ul>
-    <button type="button" class="header__btnget btn btn-outline-light">
+    <a href="#form" class="header__btnget btn btn-outline-light">
       SOLICITA UN DEMO
-    </button>
+    </a>
   </nav>
   <div ngbDropdown placement="bottom-end" container="body">
     <button type="button" class="header__menu btn" ngbDropdownToggle>
       <img src="./assets/icons/menu.svg" alt="Menu" />
     </button>
-    <div ngbDropdownMenu aria-labelledby="Menu">
-      <button ngbDropdownItem>Únetenos</button>
-      <button ngbDropdownItem>Beneficios</button>
-      <button ngbDropdownItem>Sobre nosotros</button>
-      <button ngbDropdownItem>Contáctanos</button>
+    <div class="header__dripdown" ngbDropdownMenu aria-labelledby="Menu">
+      <a href="#form" ngbDropdownItem>Únetenos</a>
+      <a href="#features" ngbDropdownItem>Beneficios</a>
+      <a href="https://elena.actus.io/" target="_blank" ngbDropdownItem
+        >Sobre nosotros</a
+      >
     </div>
   </div>
 </header>

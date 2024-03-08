@@ -4,7 +4,7 @@
   &__content {
     display: grid;
     gap: 3rem;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     @include screen(custom, max, 768) {
       text-align: center;
@@ -25,6 +25,8 @@
       @include screen(med-small) {
         flex-direction: row;
         gap: 2rem;
+        grid-column: 2/4;
+        place-content: center;
       }
     }
   }

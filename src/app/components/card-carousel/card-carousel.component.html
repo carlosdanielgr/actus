@@ -45,13 +45,16 @@
   <figure class="card__icon">
     <img [src]="data.icon" [alt]="data.title" />
   </figure>
-  <span class="card__title">{{ data.title }}</span>
-  @if(data.text){
-  <hr />
-  <p class="card__text">
-    {{ data.text }}
-  </p>
-  } @if(data.url){
+  <div>
+    <span class="card__title">{{ data.title }}</span>
+    @if(data.text){
+    <hr />
+    <p class="card__text">
+      {{ data.text }}
+    </p>
+    }
+  </div>
+  @if(data.url){
   <a [href]="data.url" class="card__link btn btn-primary"> CONOCE MÁS </a>
   }
 </ng-template>

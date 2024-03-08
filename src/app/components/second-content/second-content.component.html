@@ -12,14 +12,14 @@
     </ng-template>
     }
   </ngb-carousel>
-  <div class="second-content__imgweb row">
+  <div class="second-content__imgweb row gap-4">
     @for(image of images; track $index){
     <div class="col picsum-img-wrapper">
       <img [src]="image" alt="Image {{ $index }}" />
     </div>
     }
   </div>
-  <p class="mt-4">
+  <p>
     Empresas de primer nivel de sectores como Alimentos, Hotelería, Agrícolas,
     Ganaderas, Maquinaria y Manufactura confían en nosotros.
   </p>

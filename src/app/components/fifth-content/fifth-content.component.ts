@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
   templateUrl: './fifth-content.component.html',
   styleUrl: './fifth-content.component.scss',
 })
-export class FifthContentComponent {}
+export class FifthContentComponent {
+  showVideo = false;
+
+  onClickVideo() {
+    this.showVideo = true;
+  }
+}
