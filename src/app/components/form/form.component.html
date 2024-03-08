@@ -9,7 +9,7 @@
       tu empresa.
     </p>
   </div>
-  <form class="row">
+  <form class="row" [formGroup]="form">
     <div class="col-md-6 mb-4">
       <input
         type="text"
@@ -35,43 +35,91 @@
       />
     </div>
     <div class="col-md-6 mb-4">
-      <div ngbDropdown container="body">
+      <div ngbDropdown container="body" dropdownClass="form-dropdown">
         <button
           type="button"
           class="form-select header__menu btn"
           ngbDropdownToggle
         >
-          Prefiero ser contactado por
+          {{ form.controls["contact"].value || "Prefiero ser contactado por" }}
         </button>
         <div ngbDropdownMenu aria-labelledby="Menu">
-          <button ngbDropdownItem>Correo Electrónico</button>
-          <button ngbDropdownItem>Beneficios</button>
-          <button ngbDropdownItem>Llamada Telefónica</button>
-          <button ngbDropdownItem>Mensaje de WhatsApp</button>
+          <button
+            ngbDropdownItem
+            (click)="onSelectItem('Correo Electrónico', 'contact')"
+          >
+            Correo Electrónico
+          </button>
+          <button
+            ngbDropdownItem
+            (click)="onSelectItem('Llamada Telefónica', 'contact')"
+          >
+            Llamada Telefónica
+          </button>
+          <button
+            ngbDropdownItem
+            (click)="onSelectItem('Mensaje de WhatsApp', 'contact')"
+          >
+            Mensaje de WhatsApp
+          </button>
         </div>
       </div>
     </div>
     <div class="col-md-6 mb-4">
-      <div ngbDropdown container="body">
-        <button
-          type="button"
-          class="form-select header__menu btn"
-          ngbDropdownToggle
-        >
-          Sector de la Empresa
+      <div ngbDropdown container="body" dropdownClass="form-dropdown">
+        <button type="button" class="form-select btn" ngbDropdownToggle>
+          {{
+            form.controls["other"].value ||
+              form.controls["company"].value ||
+              "Sector de la Empresa"
+          }}
         </button>
         <div ngbDropdownMenu aria-labelledby="Menu">
-          <button ngbDropdownItem>Alimentos</button>
-          <button ngbDropdownItem>Hotelería</button>
-          <button ngbDropdownItem>Agrícolas</button>
-          <button ngbDropdownItem>Ganaderas</button>
-          <button ngbDropdownItem>Maquinaria</button>
-          <button ngbDropdownItem>Manufactura</button>
-          <input
-            type="text"
-            placeholder="Otro"
-            aria-describedby="sector company"
-          />
+          <button
+            ngbDropdownItem
+            (click)="onSelectItem('Alimentos', 'company')"
+          >
+            Alimentos
+          </button>
+          <button
+            ngbDropdownItem
+            (click)="onSelectItem('Hotelería', 'company')"
+          >
+            Hotelería
+          </button>
+          <button
+            ngbDropdownItem
+            (click)="onSelectItem('Agrícolas', 'company')"
+          >
+            Agrícolas
+          </button>
+          <button
+            ngbDropdownItem
+            (click)="onSelectItem('Ganaderas', 'company')"
+          >
+            Ganaderas
+          </button>
+          <button
+            ngbDropdownItem
+            (click)="onSelectItem('Maquinaria', 'company')"
+          >
+            Maquinaria
+          </button>
+          <button
+            ngbDropdownItem
+            (click)="onSelectItem('Manufactura', 'company')"
+          >
+            Manufactura
+          </button>
+          <div class="px-3">
+            <input
+              type="text"
+              class="form-control form__other"
+              placeholder="Otro"
+              aria-describedby="sector company"
+              formControlName="other"
+            />
+          </div>
         </div>
       </div>
     </div>

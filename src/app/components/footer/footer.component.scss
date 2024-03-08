@@ -5,8 +5,9 @@
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(4, 1fr);
+    margin-top: 2rem;
 
-    @include screen(custom, max, 768) {
+    @include screen(custom, max, 992) {
       text-align: center;
       grid-template-columns: none;
 
@@ -27,12 +28,13 @@
         gap: 2rem;
         grid-column: 2/4;
         place-content: center;
+        align-self: center;
       }
     }
   }
 
   &__social-net {
-    @include screen(small) {
+    @include screen(med-small) {
       place-self: end;
     }
   }

@@ -1,4 +1,10 @@
+@use "../../../styles/mixins" as *;
+
 .form {
   margin: 6rem 0 4rem;
   padding: 4rem;
+
+  &__other {
+    padding: 0.2rem 1rem;
+  }
 }

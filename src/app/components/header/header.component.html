@@ -1,5 +1,5 @@
 <header class="header d-flex align-items-center gap-4 justify-content-between">
-  <figure class="header__logo">
+  <figure role="button" class="header__logo" (click)="onInit()">
     <img src="./assets/images/logo.webp" alt="Logo" />
   </figure>
   <nav class="header__navbar navbar gap-4">
@@ -11,7 +11,12 @@
         <a href="#features">CARACTERÍSTICAS</a>
       </li>
       <li class="nav-item">
-        <a href="https://elena.actus.io/" target="_blank">SOBRE NOSOTROS</a>
+        <a
+          href="https://elena.actus.io/"
+          rel="noopener noreferrer"
+          target="_blank"
+          >SOBRE NOSOTROS</a
+        >
       </li>
     </ul>
     <a href="#form" class="header__btnget btn btn-outline-light">

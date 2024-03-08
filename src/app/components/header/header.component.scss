@@ -2,10 +2,11 @@
 
 .header {
   position: sticky;
-  top: 1rem;
+  top: 0;
   z-index: 1000;
   max-width: 1272px;
-  margin: 0 auto;
+  margin: 3rem auto 0;
+  background-color: var(--primary);
 
   &__logo {
     max-width: 195px;
@@ -45,6 +46,12 @@
   &__btnget {
     border-radius: 50px;
     padding: 0.6rem 1rem;
+
+    &:hover {
+      background-color: transparent;
+      color: #fff;
+      box-shadow: 0 0 5px #fff;
+    }
   }
 
   &__menu {

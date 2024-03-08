@@ -29,6 +29,4 @@ import { FooterComponent } from './components/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'actus';
-}
+export class AppComponent {}

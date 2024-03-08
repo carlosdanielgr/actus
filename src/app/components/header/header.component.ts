@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,4 +9,15 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  constructor(private readonly location: Location) {}
+
+  onInit() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+    this.location.replaceState('');
+  }
+}
