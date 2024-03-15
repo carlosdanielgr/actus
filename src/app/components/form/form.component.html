@@ -17,6 +17,7 @@
         class="form-control"
         placeholder="Nombre completo"
         aria-describedby="name"
+        formControlName="full_name"
       />
     </div>
     <div class="col-md-6 mb-4">
@@ -25,6 +26,7 @@
         class="form-control"
         placeholder="Número de Teléfono"
         aria-describedby="phone"
+        formControlName="phone"
       />
     </div>
     <div class="col-md-6 mb-4">
@@ -33,6 +35,7 @@
         class="form-control"
         placeholder="Correo Electrónico"
         aria-describedby="email"
+        formControlName="email"
       />
     </div>
     <div class="col-md-6 mb-4">
@@ -41,6 +44,7 @@
           type="button"
           class="form-select header__menu btn"
           ngbDropdownToggle
+          [class.error]="contactError"
         >
           {{ form.controls["contact"].value || "Prefiero ser contactado por" }}
         </button>
@@ -68,12 +72,13 @@
     </div>
     <div class="col-md-6 mb-4">
       <div ngbDropdown container="body" dropdownClass="form-dropdown">
-        <button type="button" class="form-select btn" ngbDropdownToggle>
-          {{
-            form.controls["other"].value ||
-              form.controls["company"].value ||
-              "Sector de la Empresa"
-          }}
+        <button
+          type="button"
+          class="form-select btn"
+          ngbDropdownToggle
+          [class.error]="companyError"
+        >
+          {{ form.controls["company"].value || "Sector de la Empresa" }}
         </button>
         <div ngbDropdownMenu aria-labelledby="Menu">
           <button
@@ -118,7 +123,7 @@
               class="form-control form__other"
               placeholder="Otro"
               aria-describedby="sector company"
-              formControlName="other"
+              (input)="setOther($event.target)"
             />
           </div>
         </div>
@@ -130,10 +135,13 @@
         class="form-control"
         placeholder="Nombre de la Empresa"
         aria-describedby="name company"
+        formControlName="company_name"
       />
     </div>
     <div class="text-center mt-5">
-      <button type="button" class="btn btn-primary">ENVIAR FORMULARIO</button>
+      <button type="button" class="btn btn-primary" (click)="onPostForm()">
+        ENVIAR FORMULARIO
+      </button>
     </div>
   </form>
 </article>

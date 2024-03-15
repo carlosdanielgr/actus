@@ -111,6 +111,11 @@ img {
   }
 }
 
+input.ng-touched.ng-invalid,
+.error {
+  border: 1.5px solid red !important;
+}
+
 // OVERRIDE BOOTSTRAP
 
 %btn-primary {
