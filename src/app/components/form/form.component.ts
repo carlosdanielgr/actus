@@ -52,7 +52,11 @@ export class FormComponent implements OnInit {
       this.form.markAllAsTouched();
       return;
     }
-    this.formService.postForm(this.form.value).subscribe();
+    this.formService.postForm(this.form.value).subscribe({
+      next: () => {
+        this.form.reset();
+      },
+    });
   }
 
   get companyError() {
